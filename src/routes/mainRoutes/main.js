@@ -3,13 +3,18 @@ import {  createStackNavigator} from 'react-navigation-stack';
 import { createAppContainer,  } from 'react-navigation';
 import MainPageGuider from "../../page/guide/MainPageGuider";
 import HelloWorld from "../../page/test/HelloWorld";
+import HorizontalScrollView from "../../page/test/HorizontalScrollView";
+import TextInputTrans from "../../page/test/TextInputTrans";
+import ClickMeButton from "../../page/test/ClickMeButton";
+import FlatList from "../../page/test/FlatList";
+import SectionList from "../../page/test/SectionList";
 
 const stackOptions = ({navigation}) => {
     // const { state, goBack } = navigation
     const headerStyle = {
-      backgroundColor: '#fff',
+      backgroundColor: '#eee',
         borderBottomWidth: 0,
-        height: 40
+        height: 60
     }
     const headerTintColor = '#000'
     const headerTitleStyle = {fontSize: 18, color: 'black', fontWeight: 'bold'}
@@ -29,13 +34,16 @@ const stackOptions = ({navigation}) => {
 }
 export const mainNavigator = createStackNavigator(Object.assign({
     //索引页
-    MainPageGuider:{screen: MainPageGuider},
+    MainPageGuider:{screen: MainPageGuider, navigationOptions: ({navigation}) => stackOptions({navigation  })},
     // 测试
     HelloWorld: {screen: HelloWorld, navigationOptions: ({navigation}) => stackOptions({navigation  })},
+    HorizontalScrollView:{screen:HorizontalScrollView,navigationOptions: ({navigation}) => stackOptions({navigation  })},
+    TextInputTrans:{screen:TextInputTrans,navigationOptions:({navigation}) => stackOptions({navigation  })},
+    ClickMeButton:{screen:ClickMeButton,navigationOptions:({navigation}) => stackOptions({navigation  })},
+    FlatList:{screen:FlatList,navigationOptions:({navigation}) => stackOptions({navigation  })},
+    SectionList:{screen:SectionList,navigationOptions:({navigation}) => stackOptions({navigation  })},
+    
     
     // 主页
-    // TruckInfoContainer: {screen: TruckInfoContainer, navigationOptions: ({navigation}) => stackOptions({navigation  })},
-    // QuestionsContainer: {screen: QuestionsContainer, navigationOptions: ({navigation}) => stackOptions({navigation  })},
-    // ReserveInfoContainer: {screen: ReserveInfoContainer, navigationOptions: ({navigation}) => stackOptions({navigation  })},
-    // CarouselListContainer: {screen: CarouselListContainer, navigationOptions: ({navigation}) => stackOptions({navigation  })}
+   
 }));

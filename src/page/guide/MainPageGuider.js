@@ -6,6 +6,7 @@ export default class MainPageGuider extends Component {
 
   click(data){
     console.log(data);
+    this.props.navigation.navigate(data);
   }
   render() {
     return (
@@ -13,10 +14,11 @@ export default class MainPageGuider extends Component {
         <FlatList
           data={[
             {key: 'HelloWorld'},
-            // {key: 'Dan'},
-            // {key: 'Dominic'},
-            // {key: 'Jackson'},
-            // {key: 'James'},
+            {key: 'HorizontalScrollView'},
+            {key: 'TextInputTrans'},
+            {key: 'ClickMeButton'},
+            {key: 'FlatList'},
+            {key: 'SectionList'},
             // {key: 'Joel'},
             // {key: 'John'},
             // {key: 'Jillian'},
