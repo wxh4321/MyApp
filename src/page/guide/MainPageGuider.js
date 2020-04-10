@@ -4,8 +4,8 @@ const { width, height } = Dimensions.get("window");
 
 export default class MainPageGuider extends Component {
 
-  click=(e)=>{
-    console.log(e);
+  click(data){
+    console.log(data);
   }
   render() {
     return (
@@ -24,11 +24,14 @@ export default class MainPageGuider extends Component {
             // {key: 'Julie'},
           ]}
           renderItem={({item}) => 
-          <TouchableOpacity onPress={this.click(item.key)}>
-            <Text style={styles.item}>
-                {item.key}
-            </Text>
-          </TouchableOpacity>
+            <TouchableOpacity onPress={(e)=>{
+              e.preventDefault();
+              this.click(item.key);
+            }}>
+              <Text style={styles.item}>
+                  {item.key}
+              </Text>
+            </TouchableOpacity>
           }
         />
       </View>
