@@ -19,9 +19,9 @@ export default class MainPageGuider extends Component {
             {key: 'ClickMeButton'},
             {key: 'FlatList'},
             {key: 'SectionList'},
-            // {key: 'Joel'},
-            // {key: 'John'},
-            // {key: 'Jillian'},
+            {key: 'MoviesList'},
+            {key: 'ActivityIndicator'},
+            {key: 'Buttons'},
             // {key: 'Jimmy'},
             // {key: 'Julie'},
           ]}

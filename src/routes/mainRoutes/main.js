@@ -1,6 +1,6 @@
 import React from 'react'
 import {  createStackNavigator} from 'react-navigation-stack';
-import { createAppContainer,  } from 'react-navigation';
+// import { createAppContainer,  } from 'react-navigation';
 import MainPageGuider from "../../page/guide/MainPageGuider";
 import HelloWorld from "../../page/test/HelloWorld";
 import HorizontalScrollView from "../../page/test/HorizontalScrollView";
@@ -8,6 +8,11 @@ import TextInputTrans from "../../page/test/TextInputTrans";
 import ClickMeButton from "../../page/test/ClickMeButton";
 import FlatList from "../../page/test/FlatList";
 import SectionList from "../../page/test/SectionList";
+import MoviesList from "../../page/test/MoviesList";
+import ActivityIndicator from "../../page/test/ActivityIndicator";
+import Buttons from "../../page/test/Buttons";
+
+
 
 const stackOptions = ({navigation}) => {
     // const { state, goBack } = navigation
@@ -42,6 +47,10 @@ export const mainNavigator = createStackNavigator(Object.assign({
     ClickMeButton:{screen:ClickMeButton,navigationOptions:({navigation}) => stackOptions({navigation  })},
     FlatList:{screen:FlatList,navigationOptions:({navigation}) => stackOptions({navigation  })},
     SectionList:{screen:SectionList,navigationOptions:({navigation}) => stackOptions({navigation  })},
+    MoviesList:{screen:MoviesList,navigationOptions:({navigation}) => stackOptions({navigation  })},
+    ActivityIndicator:{screen:ActivityIndicator,navigationOptions:({navigation}) => stackOptions({navigation  })},
+    Buttons:{screen:Buttons,navigationOptions:({navigation}) => stackOptions({navigation  })},
+    
     
     
     // 主页
